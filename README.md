@@ -61,6 +61,15 @@ fun exampleAverage() {
     }
 }
 ```
+```
+Find the average price of sold ELECTRONIC products
+Iterable implementation
+Average price of sold ELECTRONIC products: 0.5017174426583605
+Time: 933 ms
+Sequence implementation
+Average price of sold ELECTRONIC products: 0.5017174426583605
+Time: 714 ms
+```
 
 ### Case-3: take()
 ```kotlin
@@ -89,12 +98,22 @@ fun exampleTake() {
     }
 }
 ```
+```
+Get 100 CLOTHING products that price is bigger than 0.7
+Iterable implementation
+100 CLOTHING products that price is bigger than 0.7: [Product(id=87995, name=e0d79a81-59c5-4988-989b-9b9ef4fab145, price=0.9912938603842654, category=CLOTHING), ...
+Time: 550 ms
+Sequence implementation
+100 CLOTHING products that price is bigger than 0.7: [Product(id=87995, name=e0d79a81-59c5-4988-989b-9b9ef4fab145, price=0.9912938603842654, category=CLOTHING), ...
+Time: 2 ms
+```
 
 ### Case-4: flatMap()
+I got `OutOfMemory` exception when I tried with `toList()`. If you want to test with `toList()` you may decrease the `ORDER_COUNT` value.
 ```kotlin
 fun exampleFlatMap(){
     println("\nTesting flatMap()")
-    println("\nIterable implementation")
+    println("Iterable implementation")
     measure {
         val products = orders
             .flatMap { it.products }
@@ -110,5 +129,10 @@ fun exampleFlatMap(){
     }
 }
 ```
-
-I got `OutOfMemory` exception when I tried with `toList()`. If you want to test with `toList()` you may decrease the `ORDER_COUNT` value.
+```
+Testing flatMap()
+Iterable implementation
+Time: 3326 ms
+Sequence implementation
+Time: 2238 ms
+```
