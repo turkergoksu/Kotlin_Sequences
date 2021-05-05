@@ -1,5 +1,5 @@
 # Kotlin_Sequences
-You may reach the Medium story from [here]().
+You may reach the Medium story from [here](https://turkergoksu.medium.com/kotlin-sequences-nedir-nas%C4%B1l-ve-ne-zaman-e5f5405a57a7).
 ## Functions and Outputs
 ### Case-1: sumByDouble()
 ```kotlin
